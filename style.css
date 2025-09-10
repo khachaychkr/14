@@ -1,0 +1,117 @@
+/* Reset & Font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans Thai", "Prompt", sans-serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  background-color: #f5deb3;
+  color: #333;
+  text-align: center;
+  padding-top: 70px; /* ป้องกัน topnav ทับ */
+}
+
+/* Topnav */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  background: #333;
+  z-index: 1000;
+}
+.topnav a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.topnav a:hover { background: #575757; }
+
+/* Section โปรไฟล์ */
+section.profile {
+  padding: 80px 20px;
+  min-height: calc(100vh - 70px);
+}
+.profile-info {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.avatar-large {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+}
+.profile-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.profile-info p {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+.stats {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 14px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 50px;
+}
+
+/* Dark Mode */
+#toggle-dark {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #333;
+  color: white;
+  z-index: 1000;
+}
+#toggle-dark:hover { opacity: 0.8; }
+
+body.dark-mode {
+  background: #121212;
+  color: #eaeaea;
+}
+body.dark-mode .topnav { background: #1e1e1e; }
+body.dark-mode .topnav a { color: #eaeaea; }
+body.dark-mode .topnav a:hover { background: #333; }
+body.dark-mode .stats { color: #ccc; }
+body.dark-mode footer { background: #000; }
+
+/* Responsive มือถือ */
+@media (max-width: 768px) {
+  body { padding-top: 55px; }
+  .topnav { height: 55px; gap: 10px; padding: 10px; flex-wrap: wrap; flex-direction: column; }
+  .topnav a { font-size: 0.9rem; padding: 6px 8px; }
+  section.profile { padding: 60px 15px; }
+  .profile-info { max-width: 95%; }
+  .avatar-large { width: 100px; height: 100px; }
+  .profile-info h2 { font-size: 1.2rem; }
+  .profile-info p { font-size: 0.9rem; }
+  .stats { flex-direction: column; align-items: center; gap: 8px; }
+}
