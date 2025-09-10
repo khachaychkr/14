@@ -115,3 +115,4 @@ body.dark-mode footer { background: #000; }
   .profile-info p { font-size: 0.9rem; }
   .stats { flex-direction: column; align-items: center; gap: 8px; }
 }
+/* ==================== แถบสี ==================== */ .color-bars { display: flex; width: 100%; height: 200px; margin-top: 60px; } .bar { flex: 1; border: 2px solid black; } .bar1{background:#e6d6bb;} .bar2{background:#d8a691;} .bar3{background:#e58b55;} .bar4{background:#d6bb74;} .bar5{background:#e8d4c7;} .bar6{background:#9d9361;} .center-box { text-align: center; margin-top: -120px; background: white; padding: 20px 40px; display: inline-block; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
